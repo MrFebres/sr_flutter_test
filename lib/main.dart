@@ -1,9 +1,16 @@
 import 'package:flutter/material.dart';
-
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:sr_flutter_project/cubit/database_cubit.dart';
 import 'package:sr_flutter_project/routes/index.dart';
 
-void main() {
-  runApp(const MyApp());
+void main() async {
+  runApp(
+    BlocProvider(
+      create: (_) => DatabaseCubit()..initDatabase(),
+      lazy: false,
+      child: const MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
