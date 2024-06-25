@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
-
 import 'package:sr_flutter_project/cubit/form_cubit.dart';
 import 'package:sr_flutter_project/screens/home.dart';
 
@@ -14,6 +13,7 @@ final GoRouter router = GoRouter(
           create: (BuildContext context) {
             return FormCubit();
           },
+          lazy: false,
           child: const HomeScreen(),
         );
       },
