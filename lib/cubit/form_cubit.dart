@@ -51,7 +51,7 @@ class FormCubit extends Cubit<FormState> {
 
     try {
       final DateTime now = DateTime.now();
-      final DateFormat formatter = DateFormat('yyyy-MM-dd');
+      final DateFormat formatter = DateFormat('yyyy/MM/dd hh:mm');
       final String date = formatter.format(now);
 
       dbCubit.database!.insert(dbCubit.userTableName, {

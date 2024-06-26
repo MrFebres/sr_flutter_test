@@ -97,7 +97,9 @@ class HomeScreen extends StatelessWidget {
               ),
               const SizedBox(height: 8.0),
               TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  context.push('/logs');
+                },
                 child: const Text('Logs de acceso'),
               )
             ],
