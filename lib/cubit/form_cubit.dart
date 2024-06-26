@@ -61,7 +61,7 @@ class FormCubit extends Cubit<FormState> {
 
       mailController.text = '';
       passwordController.text = '';
-      emit(state.copyWith(isLoading: false));
+      emit(const FormState());
       return true;
     } catch (e) {
       debugPrint(e.toString());

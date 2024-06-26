@@ -28,6 +28,7 @@ class HomeScreen extends StatelessWidget {
               BlocBuilder<cubit.FormCubit, cubit.FormState>(
                 builder: (BuildContext context, cubit.FormState state) {
                   return TextField(
+                    controller: formCubit.mailController,
                     decoration: InputDecoration(
                       errorText: !state.email.isPure && !state.email.isValid
                           ? 'Please enter a valid mail.'
@@ -46,6 +47,7 @@ class HomeScreen extends StatelessWidget {
               BlocBuilder<cubit.FormCubit, cubit.FormState>(
                 builder: (BuildContext context, cubit.FormState state) {
                   return TextField(
+                    controller: formCubit.passwordController,
                     decoration: InputDecoration(
                       errorText:
                           !state.password.isPure && !state.password.isValid
