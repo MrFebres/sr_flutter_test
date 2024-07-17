@@ -31,6 +31,13 @@ class LogsCubit extends Cubit<LogsState> {
           ),
         );
       }
+
+      emit(
+        state.copyWith(
+          isLoading: false,
+          records: records,
+        ),
+      );
     } catch (e) {
       debugPrint(e.toString());
     }
